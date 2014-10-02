@@ -8,10 +8,9 @@ bool is_prime(int a)
 	int b = sqrt(a);
 
 	for (int i = 2; i <= b; ++i)
-	{
 		if (a % i == 0)
 			return false;
-	}
+
 	return true;
 }
 
@@ -26,7 +25,9 @@ int main()
 		if (is_prime(prime)) // Check if prime
 			foundprimes++; // If so, increment the count
 		
-		cout << "Found: " << prime << endl; // Write to the console every prime found
+		if (foundprimes == findprime)
+			cout << "10001 Real Number Prime: " << prime << endl; // Write to the console when you find a match
+
 		prime++; // Increment the prime number
 	}
 }
